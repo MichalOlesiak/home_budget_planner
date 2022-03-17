@@ -10,3 +10,5 @@ class Post(models.Model):
 # When user will be deleted his posts will be deleted too 
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.title
